@@ -1,0 +1,51 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  description: MyText
+  current_condition: MyString
+  space: MyString
+  services: MyString
+  style: MyString
+  scope_of_work: MyText
+  owner_name: MyString
+  street: MyString
+  zipcode: 1
+  state: MyString
+  likes: 1
+  views: 1
+  budget: 1.5
+  estimated_cost: 1.5
+  final_cost: 1.5
+  status: MyString
+  completed: false
+  featured: false
+  total_cost: 1.5
+  completed_date: 2015-07-24
+  applied_date: 2015-07-24
+  owner_notes: MyText
+
+two:
+  title: MyString
+  description: MyText
+  current_condition: MyString
+  space: MyString
+  services: MyString
+  style: MyString
+  scope_of_work: MyText
+  owner_name: MyString
+  street: MyString
+  zipcode: 1
+  state: MyString
+  likes: 1
+  views: 1
+  budget: 1.5
+  estimated_cost: 1.5
+  final_cost: 1.5
+  status: MyString
+  completed: false
+  featured: false
+  total_cost: 1.5
+  completed_date: 2015-07-24
+  applied_date: 2015-07-24
+  owner_notes: MyText
