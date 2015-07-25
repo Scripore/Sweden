@@ -4,6 +4,7 @@ class CreateProjects < ActiveRecord::Migration
       t.string :title
       t.text :description
       t.string :current_condition
+      t.string :owner_phone_number
       t.text :current_condition_details
       t.string :space
       t.string :services
@@ -38,7 +39,7 @@ class CreateProjects < ActiveRecord::Migration
       t.date :completed_date
       t.date :applied_date
       t.text :owner_notes
-      t.boolean :show_on_galley
+      t.boolean :show_on_gallery
 
       t.timestamps null: false
     end

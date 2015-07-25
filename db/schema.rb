@@ -17,6 +17,7 @@ ActiveRecord::Schema.define(version: 20150724190719) do
     t.string   "title"
     t.text     "description"
     t.string   "current_condition"
+    t.string   "owner_phone_number"
     t.text     "current_condition_details"
     t.string   "space"
     t.string   "services"

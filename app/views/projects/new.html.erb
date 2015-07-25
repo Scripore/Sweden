@@ -36,7 +36,7 @@
         <div class="form-group">
       <label for="select" class="col-lg-2 control-label">What would you like to renovate?</label>
       <div class="col-lg-10">
-        <select class="form-control" id="select">
+        <select class="form-control" name="project[renovate_space_type]" id="project_renovate_space_type">
           <option>Entire Unit</option>
           <option>2+ Spaces</option>
           <option>1 Space</option>
@@ -52,31 +52,31 @@
     <div class="form-group">
       <label for="textArea" class="col-lg-2 control-label">Tell us why you're renovating. What's the story?</label>
       <div class="col-lg-10">
-        <textarea class="form-control" rows="3" id="textArea"></textarea>
+        <textarea class="form-control" name="project[reason_for_renovating]" rows="3" id="project_reason_for_renovating"></textarea>
         <span class="help-block">A longer block of help text that breaks onto a new line and may extend beyond one line.</span>
       </div>
     </div>
 
 
     <div class="form-group">
-      <label for="textArea" class="col-lg-2 control-label">What's your project scope?</label>
+      <label class="col-lg-2 control-label">What's your project scope?</label>
       <div class="col-lg-10">
-        <textarea class="form-control" rows="3" id="textArea"></textarea>
+        <textarea class="form-control" name="project[scope]" id="project_scope" rows="3" id="textArea"></textarea>
         <span class="help-block">A longer block of help text that breaks onto a new line and may extend beyond one line.</span>
       </div>
     </div>
 
         <div class="form-group">
-      <label for="zipcode" class="col-lg-2 control-label">What's the total square footage of your renovation?</label>
+      <label class="col-lg-2 control-label">What's the total square footage of your renovation?</label>
       <div class="col-lg-10">
-        <input type="text" class="form-control" id="inputEmail" placeholder="0">
+        <input type="text" class="form-control" name="project[renovation_total_square_footage]" id="project_renovation_total_square_footage" placeholder="0">
       </div>
       </div>
 
         <div class="form-group">
-      <label for="select" class="col-lg-2 control-label">What style are you going for?</label>
+      <label class="col-lg-2 control-label">What style are you going for?</label>
       <div class="col-lg-10">
-        <select class="form-control" id="select">
+        <select class="form-control" name="project[renovation_style]" id="project_renovation_style">
           <option>Modern</option>
           <option>Traditional</option>
           <option>Haven't decided yet</option>
@@ -98,19 +98,19 @@
       <div class="col-lg-10">
         <div class="radio">
           <label>
-            <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked="">
+            <input type="radio" name="project[hiring_service_type]" id="project_hiring_service_type" value="build" checked="">
             Build
           </label>
         </div>
         <div class="radio">
           <label>
-            <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+            <input type="radio" name="project[hiring_service_type]" id="project_hiring_service_type" value="design">
             Design
           </label>
         </div>
    <div class="radio">
           <label>
-            <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+            <input type="radio" name="project[hiring_service_type]" id="project_hiring_service_type" value="design and build">
             Design & Build
           </label>
         </div>
@@ -119,10 +119,12 @@
 
 
         <div class="form-group">
-      <label for="zipcode" class="col-lg-2 control-label">What's your overall budget range?</label>
-      <div class="col-lg-10">
-        <input type="text" class="form-control" id="inputEmail" placeholder="min">
-                <input type="text" class="form-control" id="inputEmail" placeholder="max">
+          <label for="zipcode" class="col-lg-2 control-label">What's your overall budget range?</label><br><br>
+      <div class="col-sm-3">
+
+
+        <input type="text" class="form-control" name="project[budget_min]" id="project_budget_min" placeholder="min">
+        <input type="text" class="form-control" name="project[budget_max]" id="project_budget_max" placeholder="max">
       </div>
 
     </div>
@@ -132,7 +134,7 @@
             <div class="form-group">
       <label for="select" class="col-lg-2 control-label">What helped you set your budget?</label>
       <div class="col-lg-10">
-        <select class="form-control" id="select">
+        <select class="form-control" name="project[budget_determination_reason]" id="project_budget_determination_reason">
           <option>Got other estimates</option>
           <option>Talked to friends</option>
           <option>Did research</option>
@@ -146,7 +148,7 @@
         <div class="form-group">
       <label for="textArea" class="col-lg-2 control-label">What are your building requirements?</label>
       <div class="col-lg-10">
-        <textarea class="form-control" rows="3" id="textArea"></textarea>
+        <textarea class="form-control" name="project[building_requirements]" rows="3" id="project_building_requirements"></textarea>
       </div>
     </div>
 
@@ -154,7 +156,7 @@
                 <div class="form-group">
       <label for="select" class="col-lg-2 control-label">What are the current conditions of the spaces you're renovating?</label>
       <div class="col-lg-10">
-        <select class="form-control" id="select">
+        <select class="form-control" name="project[current_condition]" id="project_current_condition">
           <option>Functional but...</option>
           <option>A little worn</option>
           <option>Falling apart</option>
@@ -169,49 +171,65 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     <div class="form-group">
-      <label for="select" class="col-lg-2 control-label">Selects</label>
+      <label class="col-lg-2 control-label">Your Name</label>
       <div class="col-lg-10">
-        <select class="form-control" id="select">
-          <option>1</option>
-          <option>2</option>
-          <option>3</option>
-          <option>4</option>
-          <option>5</option>
-        </select>
-        <br>
-        <select multiple="" class="form-control">
-          <option>1</option>
-          <option>2</option>
-          <option>3</option>
-          <option>4</option>
-          <option>5</option>
-        </select>
+        <input type="text" class="form-control" name="project[owner_first_name]" id="project_owner_first_name" placeholder="First Name">
+        <input type="text" class="form-control" name="project[last_first_name]" id="project_owner_last_name" placeholder="Last Name">
       </div>
     </div>
+
+    <div class="form-group">
+      <label class="col-lg-2 control-label">Phone Number</label>
+      <div class="col-lg-10">
+        <input type="text" class="form-control" name="project[owner_phone_number]" id="project_owner_first_name" placeholder="(123) 456-7890 ">
+      </div>
+    </div>
+
+        <div class="form-group">
+      <label for="textArea" class="col-lg-2 control-label">What's your availability for site visits?</label>
+      <div class="col-lg-10">
+        <textarea class="form-control" name="project[visit_availability]" rows="3" id="project_visit_availability"></textarea>
+      </div>
+    </div>
+
+
+        <div class="form-group">
+      <label class="col-lg-2 control-label">How did you hear about Sweden?</label>
+      <div class="col-lg-10">
+        <input type="text" class="form-control" name="project[heard_from]" id="project_heard_from">
+      </div>
+    </div>
+
+
+        <div class="form-group">
+      <label class="col-lg-2 control-label">Give your project a unique title (or use this generic one)</label>
+      <div class="col-lg-10">
+        <input type="text" class="form-control" name="project[title]" id="project_title" value="Renovate my place">
+      </div>
+    </div>
+
+
+        <div class="form-group">
+      <label for="select" class="col-lg-2 control-label">Show my project on the Sweden project gallery</label>
+      <div class="col-lg-2">
+        <select class="form-control" name="project[show_on_gallery]" id="project_show_on_gallery">
+          <option>Yes</option>
+          <option>No</option>
+          </select>
+
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
     <div class="form-group">
       <div class="col-lg-10 col-lg-offset-2">
         <button type="reset" class="btn btn-default">Cancel</button>
