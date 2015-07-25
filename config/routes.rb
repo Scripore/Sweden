@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   get '/index' => "projects#index"
   get '/create_project' => "projects#new"
   post '/create_project' => "projects#create"
-  
+  get 'project/:id' => "projects#show"
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

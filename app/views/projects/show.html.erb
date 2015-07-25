@@ -1,0 +1,13 @@
+<div id="header">
+  <%= @project.inspect %>
+</div>
+
+<div id="main-wrap">
+  <div id="sidebar">Left Nav</div>
+  
+  <div id="content-wrap">Content
+    <%= @project.title %><br>
+    Posted by: <%= @project.owner_full_name.titleize %> in <%= @project.state.upcase %>
+  </div>
+</div>
+<div id="footer">Footer</div>
