@@ -52,7 +52,7 @@ ActiveRecord::Schema.define(version: 20150724190719) do
     t.date     "completed_date"
     t.date     "applied_date"
     t.text     "owner_notes"
-    t.boolean  "show_on_galley"
+    t.boolean  "show_on_gallery"
     t.datetime "created_at",                      null: false
     t.datetime "updated_at",                      null: false
   end
