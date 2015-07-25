@@ -17,9 +17,9 @@ class CreateProjects < ActiveRecord::Migration
       t.string :heard_from
       t.string :street
       t.integer :zipcode
-      t.string :state
       t.integer :likes,                                :default => 0
       t.integer :views,                                :default => 0          
+      t.string :state,                                 :default => 'NY'          
       t.float :budget_min
       t.float :budget_max
       t.string :budget_determination_reason
