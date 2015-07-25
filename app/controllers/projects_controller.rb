@@ -3,6 +3,7 @@ class ProjectsController < ApplicationController
 
 
   def index
+    @projects = Project.all #put by most recent
   end
 
   def new
@@ -10,9 +11,11 @@ class ProjectsController < ApplicationController
   end
 
   def create
-    project = Project.new(params[:person])
+    project = Project.new(project_params)
     binding.pry
-    render :text => "<ul>#{params}</ul>".html_safe
+    project.save
+
+    redirect_to '/'
   end
 
   def show
@@ -30,7 +33,7 @@ class ProjectsController < ApplicationController
   private
 
   def project_params
-    params.require(:project).permit(:zipped, 
+    params.require(:project).permit(:zipcode, 
                                     :property_ownership_status, 
                                     :renovate_space_type, 
                                     :reason_for_renovating, 
@@ -44,7 +47,7 @@ class ProjectsController < ApplicationController
                                     :building_requirements, 
                                     :current_condition, 
                                     :owner_first_name, 
-                                    :last_first_name, 
+                                    :owner_last_name, 
                                     :owner_phone_number, 
                                     :visit_availability, 
                                     :heard_from, 

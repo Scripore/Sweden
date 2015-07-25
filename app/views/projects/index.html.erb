@@ -1,1 +1,13 @@
-hello
+<br>
+<br>
+<br>
+<% @projects.each do |project| %>
+  <%= link_to( image_tag("http://images.clipartpanda.com/clipart-house-nTEykzqyc.png", width: '200'), "/project/#{project.id}") %><br>
+<%= project.title_truncated %><br>
+<%= project.owner_full_name %> | NY | <%= project.zipcode %><br><br><br>
+<% end %>
+
+
+
+
+<%= @projects.first.inspect %>
