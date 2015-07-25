@@ -6,10 +6,18 @@
   <div id="sidebar">Left Nav</div>
   
   <div id="content-wrap">
-    <%= @project.title.upcase %><br>
-    Posted by: <%= @project.owner_full_name.titleize %> in <%= @project.state.upcase %><br>
+    <h1><strong><%= @project.title.upcase %></strong><br></h1>
+    <i>Posted by: <strong><%= @project.owner_full_name.titleize %></strong> in <strong><%= @project.state.upcase %></strong></i><br><br>
     BRIEF DESCRIPTION<br>
-    <%= @project.reason_for_renovating %><br><br>
+    <%= @project.reason_for_renovating %><hr>
+
+    PROJECT DETAILS<br>
+    SPACE <strong><%= @project.renovate_space_type.titleize %></strong><br>
+    SERVICES <strong><%= @project.hiring_service_type.titleize %></strong><br>
+    STYLE <strong><%= @project.renovation_style.titleize %></strong><hr>
+
+    CURRENT CONDITIONS<br>
+    <%= @project.current_condition %><hr>
 
     SCOPE OF WORK <br>
     <%= @project.scope %>
