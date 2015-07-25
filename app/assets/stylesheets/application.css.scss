@@ -39,13 +39,14 @@
 
 #sidebar {
   background-color: #d2d2d2;
+     min-height: 350px;
+     margin: 10px, 10px;
 }
 
 #content-wrap {
   background-color: #c5c5c5;
 }
 
-#main-wrap > div { min-height: 450px; }
 
 #header,
 #footer {
@@ -62,6 +63,7 @@
 }
 
 #content-wrap {
+   min-height: 450px;
   float: right;
   width: 70%;
 }  

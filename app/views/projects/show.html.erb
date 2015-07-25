@@ -1,3 +1,38 @@
+  <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
+
+<script>
+var map;
+function initialize() {
+  map = new google.maps.Map(document.getElementById('sidebar'), {
+    zoom: 13,
+    center: {lat: 40.724136, lng: -73.972146}
+  });
+}
+
+google.maps.event.addDomListener(window, 'load', initialize);
+</script>
+
+
+
+
+<style>
+#sidebar {
+    border-radius: 50%;
+    behavior: url(PIE.htc); /* remove if you don't care about IE8 */
+}
+</style>
+
+
+
+
+
+
+
+
+
+
+
+
 <div id="header">
   <%= @project.inspect %>
 </div>
