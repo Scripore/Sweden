@@ -4,7 +4,7 @@
 <% @projects.each do |project| %>
   <%= link_to( image_tag("http://images.clipartpanda.com/clipart-house-nTEykzqyc.png", width: '200'), "/project/#{project.id}") %><br>
 <%= project.title_truncated %><br>
-<%= project.owner_full_name %> | <%= project.state %> <%= project.zipcode %> | <%= project.views %> VIEWS<br><br><br>
+<%= project.owner_full_name %> | <%= project.state.upcase %> <%= project.zipcode %> | <%= project.views %> VIEWS<br><br><br>
 <% end %>
 
 

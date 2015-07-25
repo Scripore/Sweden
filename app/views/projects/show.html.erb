@@ -5,9 +5,15 @@
 <div id="main-wrap">
   <div id="sidebar">Left Nav</div>
   
-  <div id="content-wrap">Content
-    <%= @project.title %><br>
-    Posted by: <%= @project.owner_full_name.titleize %> in <%= @project.state.upcase %>
+  <div id="content-wrap">
+    <%= @project.title.upcase %><br>
+    Posted by: <%= @project.owner_full_name.titleize %> in <%= @project.state.upcase %><br>
+    BRIEF DESCRIPTION<br>
+    <%= @project.reason_for_renovating %><br><br>
+
+    SCOPE OF WORK <br>
+    <%= @project.scope %>
+    
   </div>
 </div>
 <div id="footer">Footer</div>
