@@ -1,5 +1,5 @@
 class ProjectsController < ApplicationController
-
+  impressionist :actions=>[:show]
 
 
   def index
@@ -12,7 +12,6 @@ class ProjectsController < ApplicationController
 
   def create
     project = Project.new(project_params)
-    binding.pry
     project.save
 
     redirect_to '/'
@@ -20,6 +19,7 @@ class ProjectsController < ApplicationController
 
   def show
     @project = Project.find(params['id'].to_i)
+    impressionist(@project, "message...")
   end
 
   def destroy

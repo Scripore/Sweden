@@ -1,4 +1,5 @@
 class Project < ActiveRecord::Base
+  is_impressionable :counter_cache => true, :column_name => :views
 
   def title_truncated
     self.title.upcase.truncate(30)
