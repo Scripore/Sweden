@@ -1,10 +1,37 @@
+
+
 <br>
 <br>
 <br>
+
+<div id="masonry-container" class="transitions-enabled infinite-scroll clearfix">
+
 <% @projects.each do |project| %>
+
+
+  <div class="box col2">
+    <p>
   <%= link_to( image_tag("http://images.clipartpanda.com/clipart-house-nTEykzqyc.png", width: '200'), "/project/#{project.id}") %><br>
 <%= project.title_truncated %><br>
 <%= project.owner_full_name %> | <%= project.state.upcase %> <%= project.zipcode %> | <%= project.views %> VIEWS<br><br><br>
+    </p>
+  </div>
 <% end %>
 
-<%= @projects.first.inspect %>
+
+
+
+
+</div>
+
+<script>
+$(function(){
+
+  $('#masonry-container').masonry({
+    itemSelector: '.box',
+    columnWidth: 100,
+    gutterWidth: 50
+  });
+
+  });
+</script>
