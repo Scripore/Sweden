@@ -1,7 +1,43 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
-#
-# Examples:
-#
-#   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
-#   Mayor.create(name: 'Emanuel', city: cities.first)
+hash = {
+                            :title => "Renovate my place",
+                      :description => nil,
+                :current_condition => "Functional but...",
+               :owner_phone_number => "432-429-0308",
+        :current_condition_details => nil,
+                            :space => nil,
+                         :services => nil,
+                 :renovation_style => "Modern",
+              :hiring_service_type => "build",
+                            :scope => "Renovate the kitchen and bedroom.",
+                 :owner_first_name => "Ming",
+                  :owner_last_name => "Zhang",
+               :visit_availability => "The space is available for visit this week. Please call so we can coordinate",
+                       :heard_from => "I heard about Sweden from Google.",
+                           :street => nil,
+                          :zipcode => 10002,
+                            :state => "NY",
+                            :likes => 0,
+                            :views => 0,
+                       :budget_min => 423.0,
+                       :budget_max => 432423.0,
+      :budget_determination_reason => "Got other estimates",
+        :property_ownership_status => "Yes, I own",
+              :renovate_space_type => "Entire Unit",
+       :renovate_space_type_detail => nil,
+  :renovation_total_square_footage => 450,
+            :reason_for_renovating => "We're moving in soon and need to renovate",
+                   :estimated_cost => nil,
+                       :final_cost => nil,
+                :renovation_status => nil,
+                           :posted => nil,
+            :building_requirements => "I do not know the building requirements.",
+                        :completed => nil,
+                         :featured => nil,
+                       :total_cost => nil,
+                   :completed_date => nil,
+                     :applied_date => nil,
+                      :owner_notes => nil,
+                  :show_on_gallery => false,
+}
+
+20.times {|n| Project.create(hash)}

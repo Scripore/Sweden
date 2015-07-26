@@ -1,24 +1,19 @@
 
-
 <div id="new_project">
   <form class="form-horizontal" id="new_project" accept-charset="UTF-8" action="/create_project" method="post">
 
-<input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="CsEAi+ZxZZeb8zTCy94TTozTxuuzbBKZakjEqFj5X8Via9G73Q9hOTy9DpPYDTOjiXHpc+tX901gPT/UjzOVRg==" />
-
+  <input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="CsEAi+ZxZZeb8zTCy94TTozTxuuzbBKZakjEqFj5X8Via9G73Q9hOTy9DpPYDTOjiXHpc+tX901gPT/UjzOVRg==" />
 
   <fieldset>
-    <legend>Create your Sweden renovation project!
-</legend>
+    <legend>Create your Sweden renovation project!</legend>
     <div class="form-group">
       <label for="zipcode" class="col-lg-2 control-label">Where's your renovation?</label>
       <div class="col-lg-10">
         <input type="text" class="form-control" name="project[zipcode]" id="project_zipcode" placeholder="Enter in zipcode">
       </div>
-
     </div>
 
-
-        <div class="form-group">
+    <div class="form-group">
       <label for="select" class="col-lg-2 control-label">Property Ownership</label>
       <div class="col-lg-10">
         <select class="form-control" name="project[property_ownership_status]" id="project_property_ownership_status">
@@ -29,7 +24,6 @@
           <option>Representing owner</option>
           <option>Other</option>
         </select>
-
       </div>
     </div>
 
@@ -47,8 +41,6 @@
       </div>
     </div>
 
-
-
     <div class="form-group">
       <label for="textArea" class="col-lg-2 control-label">Tell us why you're renovating. What's the story?</label>
       <div class="col-lg-10">
@@ -56,7 +48,6 @@
         <span class="help-block">A longer block of help text that breaks onto a new line and may extend beyond one line.</span>
       </div>
     </div>
-
 
     <div class="form-group">
       <label class="col-lg-2 control-label">What's your project scope?</label>
@@ -66,14 +57,14 @@
       </div>
     </div>
 
-        <div class="form-group">
+    <div class="form-group">
       <label class="col-lg-2 control-label">What's the total square footage of your renovation?</label>
       <div class="col-lg-10">
         <input type="text" class="form-control" name="project[renovation_total_square_footage]" id="project_renovation_total_square_footage" placeholder="0">
       </div>
-      </div>
+    </div>
 
-        <div class="form-group">
+    <div class="form-group">
       <label class="col-lg-2 control-label">What style are you going for?</label>
       <div class="col-lg-10">
         <select class="form-control" name="project[renovation_style]" id="project_renovation_style">
@@ -82,16 +73,8 @@
           <option>Haven't decided yet</option>
           <option>Other</option>
         </select>
-
       </div>
     </div>
-
-
-
-
-
-
-
 
     <div class="form-group">
       <label class="col-lg-2 control-label">What services are you hiring for?</label>
@@ -117,21 +100,15 @@
       </div>
     </div>
 
-
-        <div class="form-group">
-          <label for="zipcode" class="col-lg-2 control-label">What's your overall budget range?</label><br><br>
+    <div class="form-group">
+      <label for="zipcode" class="col-lg-2 control-label">What's your overall budget range?</label><br><br>
       <div class="col-sm-3">
-
-
         <input type="text" class="form-control" name="project[budget_min]" id="project_budget_min" placeholder="min">
         <input type="text" class="form-control" name="project[budget_max]" id="project_budget_max" placeholder="max">
       </div>
-
     </div>
 
-
-
-            <div class="form-group">
+    <div class="form-group">
       <label for="select" class="col-lg-2 control-label">What helped you set your budget?</label>
       <div class="col-lg-10">
         <select class="form-control" name="project[budget_determination_reason]" id="project_budget_determination_reason">
@@ -145,15 +122,14 @@
       </div>
     </div>
 
-        <div class="form-group">
+    <div class="form-group">
       <label for="textArea" class="col-lg-2 control-label">What are your building requirements?</label>
       <div class="col-lg-10">
         <textarea class="form-control" name="project[building_requirements]" rows="3" id="project_building_requirements"></textarea>
       </div>
     </div>
 
-
-                <div class="form-group">
+    <div class="form-group">
       <label for="select" class="col-lg-2 control-label">What are the current conditions of the spaces you're renovating?</label>
       <div class="col-lg-10">
         <select class="form-control" name="project[current_condition]" id="project_current_condition">
@@ -168,8 +144,6 @@
         </select>
       </div>
     </div>
-
-
 
     <div class="form-group">
       <label class="col-lg-2 control-label">Your Name</label>
@@ -193,14 +167,12 @@
       </div>
     </div>
 
-
         <div class="form-group">
       <label class="col-lg-2 control-label">How did you hear about Sweden?</label>
       <div class="col-lg-10">
         <input type="text" class="form-control" name="project[heard_from]" id="project_heard_from">
       </div>
     </div>
-
 
         <div class="form-group">
       <label class="col-lg-2 control-label">Give your project a unique title (or use this generic one)</label>
@@ -209,24 +181,15 @@
       </div>
     </div>
 
-
-        <div class="form-group">
+    <div class="form-group">
       <label for="select" class="col-lg-2 control-label">Show my project on the Sweden project gallery</label>
       <div class="col-lg-2">
         <select class="form-control" name="project[show_on_gallery]" id="project_show_on_gallery">
           <option>Yes</option>
           <option>No</option>
           </select>
-
       </div>
     </div>
-
-
-
-
-
-
-
 
 
 

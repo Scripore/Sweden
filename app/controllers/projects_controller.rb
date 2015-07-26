@@ -1,7 +1,6 @@
 class ProjectsController < ApplicationController
   impressionist :actions=>[:show]
 
-
   def index
     @projects = Project.all #put by most recent
   end
@@ -19,7 +18,7 @@ class ProjectsController < ApplicationController
 
   def show
     @project = Project.find(params['id'].to_i)
-    impressionist(@project, "message...")
+    @project.update_attributes(:views => @project.impressions.count)
   end
 
   def destroy
@@ -54,6 +53,5 @@ class ProjectsController < ApplicationController
                                     :title, 
                                     :show_on_gallery)
   end
-
 
 end
