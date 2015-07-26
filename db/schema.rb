@@ -55,9 +55,9 @@ ActiveRecord::Schema.define(version: 20150726181352) do
     t.string   "heard_from"
     t.string   "street"
     t.integer  "zipcode"
-    t.string   "state"
     t.integer  "likes",                           default: 0
     t.integer  "views",                           default: 0
+    t.string   "state",                           default: "NY"
     t.float    "budget_min"
     t.float    "budget_max"
     t.string   "budget_determination_reason"
@@ -78,8 +78,8 @@ ActiveRecord::Schema.define(version: 20150726181352) do
     t.date     "applied_date"
     t.text     "owner_notes"
     t.boolean  "show_on_gallery"
-    t.datetime "created_at",                                  null: false
-    t.datetime "updated_at",                                  null: false
+    t.datetime "created_at",                                     null: false
+    t.datetime "updated_at",                                     null: false
   end
 
 end

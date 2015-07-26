@@ -14,7 +14,7 @@ hash = {
                :visit_availability => "The space is available for visit this week. Please call so we can coordinate",
                        :heard_from => "I heard about Sweden from Google.",
                            :street => nil,
-                          :zipcode => 10002,
+                          :zipcode => '10002',
                             :state => "NY",
                             :likes => 0,
                             :views => 0,
@@ -40,4 +40,14 @@ hash = {
                   :show_on_gallery => false,
 }
 
-20.times {|n| Project.create(hash)}
+20.times do |n| 
+  project = Project.new(hash)
+  project.zipcode = rand(10_000..10_100)
+  project.owner_first_name = Faker::Name.first_name
+  project.owner_last_name = Faker::Name.last_name
+  project.title = 'Renovate my ' + Faker::Lorem.sentence(2)
+  project.scope = Faker::Lorem.sentence(18)
+  project.visit_availability = Faker::Lorem.sentence(18)
+  project.save
+end
+
