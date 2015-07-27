@@ -1,5 +1,5 @@
 <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
-
+  <%= include_gon %>
 <style>
 #sidebar {
     border-radius: 50%;
@@ -12,12 +12,14 @@
 var map;
 $(function() {
   map = new google.maps.Map(document.getElementById('sidebar'), {
-    zoom: 13,
-    center: {lat: 40.724136, lng: -73.972146}
+    zoom: 14,
+    center: {lat: gon.lat, lng: gon.lng}
   });
 })
-
 </script>
+
+
+
 
 <div id="header">
   Likes:<%= @project.likes%> Views:<%= @project.views %>

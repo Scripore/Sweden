@@ -4,6 +4,8 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.3'
 gem 'faker'
+gem 'httparty'
+gem 'gon'
 gem 'masonry-rails' # JQuery Masonry
 gem 'bootstrap-sass', '~> 3.3.5'
 gem 'impressionist' # logs number of views

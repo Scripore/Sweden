@@ -40,9 +40,11 @@ hash = {
                   :show_on_gallery => false,
 }
 
+zipcodes = [10026, 10027, 10030, 10037, 10039, 10001, 10011, 10018, 10019, 10020, 10036, 10029, 10035, 10010, 10016, 10017, 10022, 10012, 10013, 10014, 10004, 10005, 10006, 10007, 10038, 10280, 10002, 10003, 10009, 10021, 10028, 10044, 10065, 10075, 10128]
+
 20.times do |n| 
   project = Project.new(hash)
-  project.zipcode = rand(10_000..10_100)
+  project.zipcode = zipcodes.sample.to_s
   project.owner_first_name = Faker::Name.first_name
   project.owner_last_name = Faker::Name.last_name
   project.title = 'Renovate my ' + Faker::Lorem.sentence(2)

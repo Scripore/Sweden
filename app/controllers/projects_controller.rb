@@ -19,6 +19,9 @@ class ProjectsController < ApplicationController
   def show
     @project = Project.find(params['id'].to_i)
     @project.update_attributes(:views => @project.impressions.count)
+    response = HTTParty.get("http://maps.googleapis.com/maps/api/geocode/json?address=#{@project.zipcode}")
+    gon.lat = response['results'][0]['geometry']['location']['lat']
+    gon.lng = response['results'][0]['geometry']['location']['lng']
   end
 
   def destroy
